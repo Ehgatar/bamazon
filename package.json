@@ -1,0 +1,19 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "DROP DATABASE IF EXISTS bamazon_db; -- Create a database called programming_db -- CREATE DATABASE bamazon_db;",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehgatar/bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ehgatar/bamazon/issues"
+  },
+  "homepage": "https://github.com/Ehgatar/bamazon#readme"
+}
