@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ehgatar/bamazon/issues"
   },
-  "homepage": "https://github.com/Ehgatar/bamazon#readme"
+  "homepage": "https://github.com/Ehgatar/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0"
+  }
 }
