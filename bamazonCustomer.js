@@ -24,9 +24,10 @@ var connection = mysql.createConnection({
 // 		return 'Please enter a whole non-zero number.';
 // 	}
 // }
+
 var checkAndBuy2 = function() {
     connection.query('SELECT * FROM products', function(err, res) {
         //CREATES A NEW TABLE IN THE COOL CLI VIEW 
         var table = new Table({
             head: ['if', 'product_name', 'department', 'price', 'stock_quantity']
-        });
+        }); 
