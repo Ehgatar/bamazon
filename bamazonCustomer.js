@@ -25,9 +25,34 @@ var connection = mysql.createConnection({
 // 	}
 // }
 
-var checkAndBuy2 = function() {
-    connection.query('SELECT * FROM products', function(err, res) {
-        //CREATES A NEW TABLE IN THE COOL CLI VIEW 
-        var table = new Table({
-            head: ['if', 'product_name', 'department', 'price', 'stock_quantity']
-        }); 
+
+connection.connect(function(err) {
+    if (err) throw err;
+    runSearch();
+  });
+  
+  function runSearch() {
+    inquirer
+      .prompt({
+        name: "action",
+        type: "list",
+        message: "What would you like to order?",
+        choices: [
+          "type in the product you want",
+        ]
+      })
+      .then(function(answer) {
+        switch (answer.action) {
+          case "Find the product":
+            artistSearch();
+            break;
+        }
+      });
+    
+  
+// var checkAndBuy2 = function() {
+//     connection.query('SELECT * FROM products', function(err, res) {
+//         //CREATES A NEW TABLE IN THE COOL CLI VIEW 
+//         var table = new Table({
+//             head: ['if', 'product_name', 'department', 'price', 'stock_quantity']
+//         }); 
