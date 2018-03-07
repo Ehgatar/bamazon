@@ -1,7 +1,7 @@
 var mysql = require("mysql");
 var inquirer = require('inquirer');
 const cTable = require('console.table');
-var Table = require('easy-table')
+
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -86,7 +86,7 @@ connection.connect(function(err) {
           .prompt({
             name: "id",
             type: "input",
-            message: "choose an ID"
+            message: "choose a product"
           })
           .then(function(answer) {
             var query = "SELECT product_name, department, price, stock_quantity FROM products WHERE ?";
